@@ -23,9 +23,9 @@ def get_data_from_db(query):
     try:
         conn = psycopg2.connect(
             dbname="id_table",
-            user="postgres",
-            password="root",
-            host="192.168.1.186"
+            user="----",
+            password="-----",
+            host="-------"
         )
         cursor = conn.cursor()
         cursor.execute(query)
@@ -162,9 +162,9 @@ def create_table_without_money():
     try:
         conn = psycopg2.connect(
             dbname="id_table",
-            user="postgres",
-            password="root",
-            host="192.168.1.186"
+            user="-----",
+            password="------",
+            host="-------"
         )
         cursor = conn.cursor()
 
@@ -203,10 +203,10 @@ def send_and_print_partial():
 
     try:
         conn = psycopg2.connect(
-            dbname="id_table",
-            user="postgres",
-            password="root",
-            host="192.168.1.186"
+            dbname="-------",
+            user="------",
+            password="------",
+            host="-------"
         )
         cursor = conn.cursor()
 
@@ -795,10 +795,10 @@ def login_window(root):
 def check_password_full(workplace, password, root, main_root):
     try:
         conn = psycopg2.connect(
-            dbname="id_table",
-            user="postgres",
-            password="root",
-            host="192.168.1.186"
+            dbname="-----",
+            user="-----",
+            password="-----",
+            host="------"
         )
         cursor = conn.cursor()
         cursor.execute("SELECT Пароль FROM uploads.catalog_passwords WHERE Рабочееместо = %s", (workplace,))
@@ -837,10 +837,10 @@ def login_window_partial(root):
 def check_password_partial(workplace, password, root, main_root):
     try:
         conn = psycopg2.connect(
-            dbname="id_table",
-            user="postgres",
-            password="root",
-            host="192.168.1.186"
+            dbname="-----",
+            user="-----",
+            password="-----",
+            host="-----"
         )
         cursor = conn.cursor()
         cursor.execute("SELECT Пароль FROM uploads.catalog_passwords WHERE Рабочееместо = %s", (workplace,))
@@ -1213,10 +1213,10 @@ def send_and_print_partial():
         # Сохранение и удаление записи
         try:
             conn = psycopg2.connect(
-                dbname="id_table",
-                user="postgres",
-                password="root",
-                host="192.168.1.186"
+                dbname="-----",
+                user="-----",
+                password="-----",
+                host="------"
             )
 
             cursor = conn.cursor()
@@ -1370,10 +1370,10 @@ def filter_records(institution_name, target_article, kosgu, service_name):
 def get_filter_values():
     try:
         conn = psycopg2.connect(
-            dbname="id_table",
-            user="postgres",
-            password="root",
-            host="192.168.1.186"
+            dbname="-----",
+            user="-----",
+            password="-----",
+            host="------"
         )
         cursor = conn.cursor()
 
@@ -1517,10 +1517,10 @@ def add_rnk_window():
             if rnk_value:
                 try:
                     conn = psycopg2.connect(
-                        dbname="id_table",
-                        user="postgres",
-                        password="root",
-                        host="192.168.1.186"
+                        dbname="-----",
+                        user="------",
+                        password="----",
+                        host="-------"
                     )
                     cursor = conn.cursor()
 
@@ -1671,10 +1671,10 @@ def show_delete_table():
 
         try:
             conn = psycopg2.connect(
-                dbname="id_table",
-                user="postgres",
-                password="root",
-                host="192.168.1.186"
+                dbname="------",
+                user="-----",
+                password="----",
+                host="-------"
             )
             cursor = conn.cursor()
 
@@ -1736,10 +1736,10 @@ def show_delete_table():
 
     # Загружаем данные для фильтров
     conn = psycopg2.connect(
-        dbname="id_table",
-        user="postgres",
-        password="root",
-        host="192.168.1.186"
+        dbname="------",
+        user="------",
+        password="------",
+        host="--------"
     )
     cursor = conn.cursor()
 
@@ -1799,10 +1799,10 @@ def show_delete_table():
 def move_to_deleted(selected_record, source_table):
     try:
         conn = psycopg2.connect(
-            dbname="id_table",
-            user="postgres",
-            password="root",
-            host="192.168.1.186"
+            dbname="-------",
+            user="------",
+            password="------",
+            host="-------"
         )
         cursor = conn.cursor()
 
