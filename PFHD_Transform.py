@@ -4,11 +4,11 @@ def merge_tables():
     try:
         # Устанавливаем соединение с базой данных PostgreSQL
         conn = psycopg2.connect(
-            dbname="id_table",
-            user="postgres",
-            password="root",
-            host="localhost",
-            port="5432"
+            dbname="",
+            user="",
+            password="",
+            host="",
+            port=""
         )
         cur = conn.cursor()
 
