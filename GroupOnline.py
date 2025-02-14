@@ -6,7 +6,7 @@ def merge_tables():
     cur = None  # Initialize cur to avoid UnboundLocalError
     try:
         # Создаем SQLAlchemy engine для подключения к PostgreSQL
-        engine = create_engine('postgresql+psycopg2://postgres:root@localhost:5432/id_table')
+        engine = create_engine('postgresql+psycopg2://')
 
         # Чтение данных из Excel файла с использованием абсолютного пути
         institutions_df = pd.read_excel(r'\\Fbox\Exchange\Плановый отдел\Благов Виталий\SQL\Выгрузки\УЧРЕЖДЕНИЯ\учреждения.xlsx')
