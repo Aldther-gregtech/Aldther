@@ -10,7 +10,7 @@ from datetime import datetime
 
 def run_script():
     # Cоздание подключения к базе данных
-    engine = create_engine('postgresql+psycopg2://postgres:root@localhost:5432/id_table')
+    engine = create_engine('postgresql+psycopg2://---------/id_table')
 
     # Путь к файлу Excel
     file_path = r'\\Fbox\Exchange\Плановый отдел\Благов Виталий\SQL\Выгрузки\ПФХД\ПФХД.xlsx'
@@ -168,7 +168,7 @@ def run_script():
 
     print("Загрузка Контрактов успешно завершена")
 
-    engine = create_engine('postgresql+psycopg2://postgres:root@localhost:5432/id_table')
+    engine = create_engine('postgresql+psycopg2://------/id_table')
 
     df = pd.read_sql_table('PFHD_TABLE', engine, schema='uploads')
 
@@ -193,7 +193,7 @@ def run_script():
 
     print("Таблица 'ГруппПФХД' успешно создана в схеме 'Transformations'.")
 
-    engine = create_engine('postgresql+psycopg2://postgres:root@localhost:5432/id_table')
+    engine = create_engine('postgresql+psycopg2://-----------/id_table')
 
     df = pd.read_sql_table('Contracts_TABLE', engine, schema='uploads')
 
@@ -217,10 +217,10 @@ def run_script():
     # Настройки подключения к PostgreSQL
     connection_params = {
         "dbname": "id_table",
-        "user": "postgres",
-        "password": "root",
-        "host": "localhost",
-        "port": "5432"
+        "user": "-------",
+        "password": "-----",
+        "host": "------",
+        "port": "----"
     }
 
     # SQL-запрос для объединения таблиц с исправленной логикой
@@ -358,7 +358,7 @@ def run_script():
         print("Ошибка при выполнении скрипта:", e)
 
     # Cоздание подключения к базе данных
-    engine = create_engine('postgresql+psycopg2://postgres:root@localhost:5432/id_table')
+    engine = create_engine('postgresql+psycopg2://---------/id_table')
 
     # Запрос для получения данных из таблицы PFHD-CONTRACTS в схеме verification
     query = 'SELECT * FROM verification."PFHD-CONTRACTS"'
